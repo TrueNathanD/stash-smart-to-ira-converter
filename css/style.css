@@ -1,0 +1,116 @@
+body {
+    color: rgb(0, 190, 200);
+    background-color: rgb(0, 0, 0);
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: rgb(0, 190, 200);
+    background-color: rgb(0, 0, 0);
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 1.8rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+p {
+    color: rgb(0, 190, 200);
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+h4 {
+    color: rgb(0, 190, 200);
+    background-color: rgb(26, 143, 143, 0.5);
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    padding: 0.7rem;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    color: rgb(0, 190, 200);
+    background-color: rgb(26, 143, 143, 0.5);
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: 2rem;
+    margin: 2px;
+    padding: 2px;
+    border: 2px white;
+    width: 95%;
+}
+
+li {
+    list-style-type: none;
+    color: rgb(0, 190, 200);
+    background-color: rgb(26, 143, 143, 0.5);
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: 2rem;
+    margin: 2px;
+    padding: 2px;
+    text-align: right;
+    border: 2px white;
+}
+
+input {
+    color: rgb(0, 190, 200);
+    background-color: rgb(0, 0, 0);
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: 2rem;
+    text-align: right;
+    float: right;
+    margin-left: 1rem;
+    height: 2rem;
+    width: 20%;
+}
+
+/* Columns */
+.my-two-columns {
+    display: flex;
+    flex-direction: row;
+}
+
+.my-left-column {
+    width: 50%;
+    height: 100vh;
+    text-align: center;
+}
+
+.my-right-column {
+    width: 50%;
+    height: 100vh;
+}
+
+/* Google Icons */
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 700,
+    'GRAD' 200,
+    'opsz' 48
+}
+span.material-symbols-outlined {
+    color: rgb(0, 255, 255);
+    background-color: rgb(0, 0, 0);
+    font-size: 4rem;
+    margin: 0.5rem;
+    padding: 0.4rem;
+}
+
+/* Button */
+button {
+    background-color: rgb(0, 255, 255);
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+
