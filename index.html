@@ -16,31 +16,31 @@
 </head>
 <body>
     <h1>STASH<br>Smart Portfolio to Roth IRA<br>Investment Converter</h1>
-    <p class="p-version">Version 0.5</p>
+    <p class="p-version">Version 0.6</p>
     <div class="my-two-columns">
         <div class="my-left-column">
             <h4>Smart Portfolio Investment Totals</h4>
                 <ul>
-                    <li><label for="antHexaVal">Stocks Nationwide: $</label><input type="text" id="antHexaVal" value="0"></li>
-                    <li><label for="batHexaVal">Up & Coming: $</label><input type="text" id="batHexaVal" value="0"></li>
-                    <li><label for="catHexaVal">Global USD Bonds Variety Pack: $</label><input type="text" id="catHexaVal" value="0"></li>
-                    <li><label for="dogHexaVal">Foreign Heavyweights: $</label><input type="text" id="dogHexaVal" value="0"></li>
-                    <li><label for="eelHexaVal">Bitcoin Trust: $</label><input type="text" id="eelHexaVal" value="0"></li>
-                    <li><label for="foxHexaVal">Ethereum Trust: $</label><input type="text" id="foxHexaVal" value="0"></li>
-                    <li><label for="totalHexaVal">Total Entered: $</label><input id="totalHexaVal" value="" disabled></li>
+                    <li><label for="antHexaVal">Stocks Nationwide: $<input type="text" id="antHexaVal" value="0"></label></li>
+                    <li><label for="batHexaVal">Up & Coming: $<input type="text" id="batHexaVal" value="0"></label></li>
+                    <li><label for="catHexaVal">Global USD Bonds Variety Pack: $<input type="text" id="catHexaVal" value="0"></label></li>
+                    <li><label for="dogHexaVal">Foreign Heavyweights: $<input type="text" id="dogHexaVal" value="0"></label></li>
+                    <li><label for="eelHexaVal">Bitcoin Trust: $<input type="text" id="eelHexaVal" value="0"></label></li>
+                    <li><label for="foxHexaVal">Ethereum Trust: $<input type="text" id="foxHexaVal" value="0"></label></li>
+                    <li><label for="totalHexaVal">Total Entered: $ <span id="totalHexaVal"></span></label></li>
                 </ul>
                 <button onclick="calculate()"><br>Calculate!<br><br><span class="material-symbols-outlined">price_check</span></button>
         </div>
         <div class="my-right-column">
-            <h4>NEW Invested Totals | Investment Percentage of 100 | Amount To Invest with $115</h4>
+            <h4>New Roth IRA Investment Totals</h4>
             <ul>
-                <li>NEW Stocks Nationwide: $<span id="antBoxVal"></span> | <span id="antBoxPer"></span> | <span id="antPerOf"></span></li>
-                <li>NEW Up & Coming: $<span id="batBoxVal"></span> | <span id="batBoxPer"></span> | <span id="batPerOf"></span></li>
-                <li>NEW Global USD Bonds Variety Pack: $<span id="catBoxVal"></span> | <span id="catBoxPer"></span> | <span id="catPerOf"></span></li>
-                <li>NEW Foreign Heavyweights: $<span id="dogBoxVal"></span> | <span id="dogBoxPer"></span> | <span id="dogPerOf"></span></li>
-                <li>|</li>
-                <li>|</li>
-                <li>NEW Totals: $<span id="totalBoxVal"></span> | <span id="totalBoxPer"></span> | <span id="totalPerOf"></span></li>
+                <li>Stocks Nationwide: $ <span id="antBoxVal"></span> | <span id="antBoxPer"></span> % | $ <span id="antPerOf"></span></li>
+                <li>Up & Coming: $ <span id="batBoxVal"></span> | <span id="batBoxPer"></span> % | $ <span id="batPerOf"></span></li>
+                <li>Global USD Bonds Variety Pack: $ <span id="catBoxVal"></span> | <span id="catBoxPer"></span> % | $ <span id="catPerOf"></span></li>
+                <li>Foreign Heavyweights: $ <span id="dogBoxVal"></span> | <span id="dogBoxPer"></span> % | $ <span id="dogPerOf"></span></li>
+                <li><br></li>
+                <li><br></li>
+                <li>Totals: $ <span id="totalBoxVal"></span> | Percent: <span id="totalBoxPer"></span> % | Amount Invested: $ <span id="totalPerOf"></span></li>
             </ul>
         </div>
     </div>
