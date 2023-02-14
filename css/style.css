@@ -4,6 +4,12 @@ body {
     font-family: "Roboto", sans-serif;
     margin: 0;
     padding: 0;
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+body.body-fade-in {
+    opacity: 0;
 }
 
 h1 {

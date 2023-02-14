@@ -1,5 +1,9 @@
 console.log("Hello, World.")
 
+window.onload = function() {
+    document.body.classList.remove("body-fade-in");
+};
+
 function calculate() {
     /* Grabs the variable values from the input boxes */
     let antHexaVal = parseFloat(document.getElementById("antHexaVal").value);
