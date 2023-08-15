@@ -59,5 +59,70 @@ function calculate() {
 
     let totalPerOf = (antPerOf + batPerOf + catPerOf + dogPerOf)
     document.getElementById("totalPerOf").innerHTML = totalPerOf.toFixed(2);
+
+    /* Updates first values in summary text */
+    document.getElementById("antHexaValSummary").textContent = antHexaVal.toFixed(2);
+    document.getElementById("batHexaValSummary").textContent = batHexaVal.toFixed(2);
+    document.getElementById("catHexaValSummary").textContent = catHexaVal.toFixed(2);
+    document.getElementById("dogHexaValSummary").textContent = dogHexaVal.toFixed(2);
+
+    document.getElementById("antBoxPerSummary").textContent = (antBoxPer * 100).toFixed(2);
+    document.getElementById("batBoxPerSummary").textContent = (batBoxPer * 100).toFixed(2);
+    document.getElementById("catBoxPerSummary").textContent = (catBoxPer * 100).toFixed(2);
+    document.getElementById("dogBoxPerSummary").textContent = (dogBoxPer * 100).toFixed(2);
+
+    /* Updates second values in summary text */
+    document.getElementById("antPerOfInvested").textContent = antPerOf.toFixed(2);
+    document.getElementById("batPerOfInvested").textContent = batPerOf.toFixed(2);
+    document.getElementById("catPerOfInvested").textContent = catPerOf.toFixed(2);
+    document.getElementById("dogPerOfInvested").textContent = dogPerOf.toFixed(2);
 }
+
+/* The reset function. Clears all fields of values */
+function reset() {
+    /* Clears the input fields */
+    document.getElementById("antHexaVal").value = "0";
+    document.getElementById("batHexaVal").value = "0";
+    document.getElementById("catHexaVal").value = "0";
+    document.getElementById("dogHexaVal").value = "0";
+    document.getElementById("eelHexaVal").value = "0";
+    document.getElementById("foxHexaVal").value = "0";
+
+    /* Clears the calculated values */
+    document.getElementById("totalHexaVal").innerHTML = "";
+    document.getElementById("antBoxVal").innerHTML = "";
+    document.getElementById("batBoxVal").innerHTML = "";
+    document.getElementById("catBoxVal").innerHTML = "";
+    document.getElementById("dogBoxVal").innerHTML = "";
+    document.getElementById("antBoxPer").innerHTML = "";
+    document.getElementById("batBoxPer").innerHTML = "";
+    document.getElementById("catBoxPer").innerHTML = "";
+    document.getElementById("dogBoxPer").innerHTML = "";
+    document.getElementById("totalBoxVal").innerHTML = "";
+    document.getElementById("totalBoxPer").innerHTML = "";
+    document.getElementById("antPerOf").innerHTML = "";
+    document.getElementById("batPerOf").innerHTML = "";
+    document.getElementById("catPerOf").innerHTML = "";
+    document.getElementById("dogPerOf").innerHTML = "";
+    document.getElementById("totalPerOf").innerHTML = "";
+    /* Clears the summary values */
+    document.getElementById("antHexaValSummary").innerHTML = "";
+    document.getElementById("batHexaValSummary").innerHTML = "";
+    document.getElementById("catHexaValSummary").innerHTML = "";
+    document.getElementById("dogHexaValSummary").innerHTML = "";
+    document.getElementById("antBoxPerSummary").innerHTML = "";
+    document.getElementById("batBoxPerSummary").innerHTML = "";
+    document.getElementById("catBoxPerSummary").innerHTML = "";
+    document.getElementById("dogBoxPerSummary").innerHTML = "";
+    document.getElementById("antPerOfInvested").innerHTML = "";
+    document.getElementById("batPerOfInvested").innerHTML = "";
+    document.getElementById("catPerOfInvested").innerHTML = "";
+    document.getElementById("dogPerOfInvested").innerHTML = "";
+}
+
+/* Adds an event listener for the reset button */
+document.getElementById("resetButton").addEventListener("click", reset);
+
+/* Adds an event listener for the calculate button */
+document.getElementById("calculateButton").addEventListener("click", calculate);
 

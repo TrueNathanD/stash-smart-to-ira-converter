@@ -17,7 +17,7 @@
 </head>
 <body class="body-fade-in">
     <h1>STASH<br>Smart Portfolio to Roth IRA<br>Investment Converter</h1>
-    <p class="p-version">Version 0.6</p>
+    <p class="p-version">Version 0.71</p>
     <div class="my-two-columns">
         <div class="my-left-column">
             <h4>Smart Portfolio Investment Totals</h4>
@@ -31,6 +31,7 @@
                     <li><label for="totalHexaVal">Total Entered: $ <span id="totalHexaVal"></span></label></li>
                 </ul>
                 <button onclick="calculate()"><br>Calculate!<br><br><span class="material-symbols-outlined">price_check</span></button>
+                <button id="resetButton">Reset!</button>
         </div>
         <div class="my-right-column">
             <h4>New Roth IRA Investment Totals</h4>
@@ -44,6 +45,18 @@
                 <li>Totals: $ <span id="totalBoxVal"></span> | Percent: <span id="totalBoxPer"></span> % | Amount Invested: $ <span id="totalPerOf"></span></li>
             </ul>
         </div>
+    </div>
+    <div>
+        <p>This week, $20 was invested into my STASH Smart Portfolio as follows:</p>
+        <p>In Stocks Nationwide ($VTI), $<span id="antHexaValSummary">0</span> was invested, <span id="antBoxPerSummary">0</span>% of the total investment.</p>
+        <p>In Up & Coming ($VWO), $<span id="batHexaValSummary">0</span> was invested, <span id="batBoxPerSummary">0</span>% of the total investment.</p>
+        <p>In Global USD Bonds Variety Pack ($IUSB), $<span id="catHexaValSummary">0</span> was invested, <span id="catBoxPerSummary">0</span>% of the total investment.</p>
+        <p>In Foreign Heavyweights ($IEFA), $<span id="dogHexaValSummary">0</span> was invested, <span id="dogBoxPerSummary">0</span>% of the total investment.</p>
+        <p>Converting this into a $115 investment into my ROTH IRA, it becomes:</p>
+        <p>In Stocks Nationwide ($VTI), $<span id="antPerOfInvested">0</span> was invested.</p>
+        <p>In Up & Coming ($VWO), $<span id="batPerOfInvested">0</span> was invested.</p>
+        <p>In Global USD Bonds Variety Pack ($IUSB), $<span id="catPerOfInvested">0</span> was invested.</p>
+        <p>In Foreign Heavyweights ($IEFA), $<span id="dogPerOfInvested">0</span> was invested.</p>
     </div>
     <!-- Local JavaScript -->
     <script type="text/javascript" src="./js/main.js"></script>
