@@ -17,7 +17,7 @@
 </head>
 <body class="body-fade-in">
     <h1>STASH<br>Smart Portfolio to Roth IRA<br>Investment Converter</h1>
-    <p class="p-version">Version 0.71</p>
+    <p class="p-version">Version 0.8</p>
     <div class="my-two-columns">
         <div class="my-left-column">
             <h4>Smart Portfolio Investment Totals</h4>
@@ -30,8 +30,8 @@
                     <li><label for="foxHexaVal">Ethereum Trust: $<input type="text" id="foxHexaVal" value="0"></label></li>
                     <li><label for="totalHexaVal">Total Entered: $ <span id="totalHexaVal"></span></label></li>
                 </ul>
-                <button onclick="calculate()"><br>Calculate!<br><br><span class="material-symbols-outlined">price_check</span></button>
-                <button id="resetButton">Reset!</button>
+                <button id="calculateButton" onclick="calculate()"><br>Calculate!<br><br><span class="material-symbols-outlined calculate-span">price_check</span></button>
+                <button id="resetButton" onclick="reset()"><br>Reset!<br><br><span class="material-symbols-outlined reset-span">delete</span></button>
         </div>
         <div class="my-right-column">
             <h4>New Roth IRA Investment Totals</h4>
@@ -48,15 +48,17 @@
     </div>
     <div>
         <p>This week, $20 was invested into my STASH Smart Portfolio as follows:</p>
-        <p>In Stocks Nationwide ($VTI), $<span id="antHexaValSummary">0</span> was invested, <span id="antBoxPerSummary">0</span>% of the total investment.</p>
-        <p>In Up & Coming ($VWO), $<span id="batHexaValSummary">0</span> was invested, <span id="batBoxPerSummary">0</span>% of the total investment.</p>
-        <p>In Global USD Bonds Variety Pack ($IUSB), $<span id="catHexaValSummary">0</span> was invested, <span id="catBoxPerSummary">0</span>% of the total investment.</p>
-        <p>In Foreign Heavyweights ($IEFA), $<span id="dogHexaValSummary">0</span> was invested, <span id="dogBoxPerSummary">0</span>% of the total investment.</p>
+        <p>In Stocks Nationwide $VTI, $<span id="antHexaValSummary">0</span> was invested, <span id="antBoxPerSummary">0</span>% of the total investment.</p>
+        <p>In Up & Coming $VWO, $<span id="batHexaValSummary">0</span> was invested, <span id="batBoxPerSummary">0</span>% of the total investment.</p>
+        <p>In Global USD Bonds Variety Pack $IUSB, $<span id="catHexaValSummary">0</span> was invested, <span id="catBoxPerSummary">0</span>% of the total investment.</p>
+        <p>In Foreign Heavyweights $IEFA, $<span id="dogHexaValSummary">0</span> was invested, <span id="dogBoxPerSummary">0</span>% of the total investment.</p>
+        <p>In Bitcoin Trust (Exclusive to STASH Smart Portfolios), $<span id="eelHexaValSummary">0</span> was invested, <span id="eelBoxPerSummary">0</span>% of the total investment.</p>
+        <p>In Ethereum Trust (Exclusive to STASH Smart Portfolios), $<span id="foxHexaValSummary">0</span> was invested, <span id="foxBoxPerSummary">0</span>% of the total investment.</p>
         <p>Converting this into a $115 investment into my ROTH IRA, it becomes:</p>
-        <p>In Stocks Nationwide ($VTI), $<span id="antPerOfInvested">0</span> was invested.</p>
-        <p>In Up & Coming ($VWO), $<span id="batPerOfInvested">0</span> was invested.</p>
-        <p>In Global USD Bonds Variety Pack ($IUSB), $<span id="catPerOfInvested">0</span> was invested.</p>
-        <p>In Foreign Heavyweights ($IEFA), $<span id="dogPerOfInvested">0</span> was invested.</p>
+        <p>In Stocks Nationwide $VTI, $<span id="antPerOfInvested">0</span> was invested.</p>
+        <p>In Up & Coming $VWO, $<span id="batPerOfInvested">0</span> was invested.</p>
+        <p>In Global USD Bonds Variety Pack $IUSB, $<span id="catPerOfInvested">0</span> was invested.</p>
+        <p>In Foreign Heavyweights $IEFA, $<span id="dogPerOfInvested">0</span> was invested.</p>
     </div>
     <!-- Local JavaScript -->
     <script type="text/javascript" src="./js/main.js"></script>

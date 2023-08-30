@@ -39,10 +39,29 @@ function calculate() {
     let batBoxPer = batBoxVal / 20;
     let catBoxPer = catBoxVal / 20;
     let dogBoxPer = dogBoxVal / 20;
-    document.getElementById("antBoxPer").innerHTML = antBoxPer.toFixed(2) * 100;
-    document.getElementById("batBoxPer").innerHTML = batBoxPer.toFixed(2) * 100;
-    document.getElementById("catBoxPer").innerHTML = catBoxPer.toFixed(2) * 100;
-    document.getElementById("dogBoxPer").innerHTML = dogBoxPer.toFixed(2) * 100;
+    document.getElementById("antBoxPer").innerHTML = (antBoxPer * 100).toFixed(2);
+    document.getElementById("batBoxPer").innerHTML = (batBoxPer * 100).toFixed(2);
+    document.getElementById("catBoxPer").innerHTML = (catBoxPer * 100).toFixed(2);
+    document.getElementById("dogBoxPer").innerHTML = (dogBoxPer * 100).toFixed(2);
+
+    /* Gets the values for the initial summary and percentage */
+    let antHexaValSummary = antHexaVal;
+    let antBoxPerSummary = (antHexaVal / totalHexaVal) * 100;
+
+    let batHexaValSummary = batHexaVal;
+    let batBoxPerSummary = (batHexaVal / totalHexaVal) * 100;
+
+    let catHexaValSummary = catHexaVal;
+    let catBoxPerSummary = (catHexaVal / totalHexaVal) * 100;
+
+    let dogHexaValSummary = dogHexaVal;
+    let dogBoxPerSummary = (dogHexaVal / totalHexaVal) * 100;
+
+    let eelHexaValSummary = eelHexaVal;
+    let eelBoxPerSummary = (eelHexaVal / totalHexaVal) * 100;
+
+    let foxHexaValSummary = foxHexaVal;
+    let foxBoxPerSummary = (foxHexaVal / totalHexaVal) * 100;
 
     /* Displays the total percent used in calculation */
     document.getElementById("totalBoxPer").innerHTML = (antBoxPer + batBoxPer + catBoxPer + dogBoxPer).toFixed(2) * 100;
@@ -61,15 +80,20 @@ function calculate() {
     document.getElementById("totalPerOf").innerHTML = totalPerOf.toFixed(2);
 
     /* Updates first values in summary text */
-    document.getElementById("antHexaValSummary").textContent = antHexaVal.toFixed(2);
-    document.getElementById("batHexaValSummary").textContent = batHexaVal.toFixed(2);
-    document.getElementById("catHexaValSummary").textContent = catHexaVal.toFixed(2);
-    document.getElementById("dogHexaValSummary").textContent = dogHexaVal.toFixed(2);
+    document.getElementById("antHexaValSummary").textContent = antHexaValSummary.toFixed(2);
+    document.getElementById("batHexaValSummary").textContent = batHexaValSummary.toFixed(2);
+    document.getElementById("catHexaValSummary").textContent = catHexaValSummary.toFixed(2);
+    document.getElementById("dogHexaValSummary").textContent = dogHexaValSummary.toFixed(2);
+    document.getElementById("eelHexaValSummary").textContent = eelHexaValSummary.toFixed(2);
+    document.getElementById("foxHexaValSummary").textContent = foxHexaValSummary.toFixed(2);
 
-    document.getElementById("antBoxPerSummary").textContent = (antBoxPer * 100).toFixed(2);
-    document.getElementById("batBoxPerSummary").textContent = (batBoxPer * 100).toFixed(2);
-    document.getElementById("catBoxPerSummary").textContent = (catBoxPer * 100).toFixed(2);
-    document.getElementById("dogBoxPerSummary").textContent = (dogBoxPer * 100).toFixed(2);
+    document.getElementById("antBoxPerSummary").textContent = antBoxPerSummary.toFixed(2);
+    document.getElementById("batBoxPerSummary").textContent = batBoxPerSummary.toFixed(2);
+    document.getElementById("catBoxPerSummary").textContent = catBoxPerSummary.toFixed(2);
+    document.getElementById("dogBoxPerSummary").textContent = dogBoxPerSummary.toFixed(2);
+    document.getElementById("eelBoxPerSummary").textContent = eelBoxPerSummary.toFixed(2);
+    document.getElementById("foxBoxPerSummary").textContent = foxBoxPerSummary.toFixed(2);
+    
 
     /* Updates second values in summary text */
     document.getElementById("antPerOfInvested").textContent = antPerOf.toFixed(2);
@@ -90,30 +114,43 @@ function reset() {
 
     /* Clears the calculated values */
     document.getElementById("totalHexaVal").innerHTML = "";
+
     document.getElementById("antBoxVal").innerHTML = "";
     document.getElementById("batBoxVal").innerHTML = "";
     document.getElementById("catBoxVal").innerHTML = "";
     document.getElementById("dogBoxVal").innerHTML = "";
+
     document.getElementById("antBoxPer").innerHTML = "";
     document.getElementById("batBoxPer").innerHTML = "";
     document.getElementById("catBoxPer").innerHTML = "";
     document.getElementById("dogBoxPer").innerHTML = "";
+
     document.getElementById("totalBoxVal").innerHTML = "";
+
     document.getElementById("totalBoxPer").innerHTML = "";
+
     document.getElementById("antPerOf").innerHTML = "";
     document.getElementById("batPerOf").innerHTML = "";
     document.getElementById("catPerOf").innerHTML = "";
     document.getElementById("dogPerOf").innerHTML = "";
+
     document.getElementById("totalPerOf").innerHTML = "";
+
     /* Clears the summary values */
     document.getElementById("antHexaValSummary").innerHTML = "";
     document.getElementById("batHexaValSummary").innerHTML = "";
     document.getElementById("catHexaValSummary").innerHTML = "";
     document.getElementById("dogHexaValSummary").innerHTML = "";
+    document.getElementById("eelHexaValSummary").innerHTML = "";
+    document.getElementById("foxHexaValSummary").innerHTML = "";
+
     document.getElementById("antBoxPerSummary").innerHTML = "";
     document.getElementById("batBoxPerSummary").innerHTML = "";
     document.getElementById("catBoxPerSummary").innerHTML = "";
     document.getElementById("dogBoxPerSummary").innerHTML = "";
+    document.getElementById("eelBoxPerSummary").innerHTML = "";
+    document.getElementById("foxBoxPerSummary").innerHTML = "";
+
     document.getElementById("antPerOfInvested").innerHTML = "";
     document.getElementById("batPerOfInvested").innerHTML = "";
     document.getElementById("catPerOfInvested").innerHTML = "";
