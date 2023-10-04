@@ -12,20 +12,22 @@ function calculate() {
     let dogHexaVal = parseFloat(document.getElementById("dogHexaVal").value);
     let eelHexaVal = parseFloat(document.getElementById("eelHexaVal").value);
     let foxHexaVal = parseFloat(document.getElementById("foxHexaVal").value);
+    let garHexaVal = parseFloat(document.getElementById("garHexaVal").value);
 
     /* Displays the total value entered by the user */
-    let totalHexaVal = (antHexaVal + batHexaVal + catHexaVal + dogHexaVal + eelHexaVal + foxHexaVal);
+    let totalHexaVal = (antHexaVal + batHexaVal + catHexaVal + dogHexaVal + eelHexaVal + foxHexaVal + garHexaVal);
     document.getElementById("totalHexaVal").innerHTML = totalHexaVal.toFixed(2);
 
     /* Distributes eelHexaVal and foxHexaVal out evenly among the other variables */
-    let distributedAmount = (eelHexaVal + foxHexaVal) / 4;
+    let distributedAmount = (eelHexaVal + foxHexaVal) / 5;
     let antBoxVal = antHexaVal + distributedAmount;
     let batBoxVal = batHexaVal + distributedAmount;
     let catBoxVal = catHexaVal + distributedAmount;
     let dogBoxVal = dogHexaVal + distributedAmount;
+    let garBoxVal = garHexaVal + distributedAmount;
 
     /* Displays the total value remaining */
-    let totalBoxVal = (antBoxVal + batBoxVal + catBoxVal + dogBoxVal);
+    let totalBoxVal = (antBoxVal + batBoxVal + catBoxVal + dogBoxVal + garBoxVal);
     document.getElementById("totalBoxVal").innerHTML = totalBoxVal.toFixed(2);
     
     /* Displays the new variable values */
@@ -33,16 +35,19 @@ function calculate() {
     document.getElementById("batBoxVal").innerHTML = batBoxVal.toFixed(2);
     document.getElementById("catBoxVal").innerHTML = catBoxVal.toFixed(2);
     document.getElementById("dogBoxVal").innerHTML = dogBoxVal.toFixed(2);
+    document.getElementById("garBoxVal").innerHTML = garBoxVal.toFixed(2);
 
     /* Divides the new variable values by 20 (gets % of $20) */
     let antBoxPer = antBoxVal / 20;
     let batBoxPer = batBoxVal / 20;
     let catBoxPer = catBoxVal / 20;
     let dogBoxPer = dogBoxVal / 20;
+    let garBoxPer = garBoxVal / 20;
     document.getElementById("antBoxPer").innerHTML = (antBoxPer * 100).toFixed(2);
     document.getElementById("batBoxPer").innerHTML = (batBoxPer * 100).toFixed(2);
     document.getElementById("catBoxPer").innerHTML = (catBoxPer * 100).toFixed(2);
     document.getElementById("dogBoxPer").innerHTML = (dogBoxPer * 100).toFixed(2);
+    document.getElementById("garBoxPer").innerHTML = (garBoxPer * 100).toFixed(2);
 
     /* Gets the values for the initial summary and percentage */
     let antHexaValSummary = antHexaVal;
@@ -63,20 +68,25 @@ function calculate() {
     let foxHexaValSummary = foxHexaVal;
     let foxBoxPerSummary = (foxHexaVal / totalHexaVal) * 100;
 
+    let garHexaValSummary = garHexaVal;
+    let garBoxPerSummary = (garHexaVal / totalHexaVal) * 100;
+
     /* Displays the total percent used in calculation */
-    document.getElementById("totalBoxPer").innerHTML = (antBoxPer + batBoxPer + catBoxPer + dogBoxPer).toFixed(2) * 100;
+    document.getElementById("totalBoxPer").innerHTML = (antBoxPer + batBoxPer + catBoxPer + dogBoxPer + garBoxPer).toFixed(2) * 100;
 
     /* Multiplies the new variable values that were divided by 20 by 115 (converts % to $ of $115) */
     let antPerOf = antBoxPer * 115;
     let batPerOf = batBoxPer * 115;
     let catPerOf = catBoxPer * 115;
     let dogPerOf = dogBoxPer * 115;
+    let garPerOf = garBoxPer * 115;
     document.getElementById("antPerOf").innerHTML = antPerOf.toFixed(2);
     document.getElementById("batPerOf").innerHTML = batPerOf.toFixed(2);
     document.getElementById("catPerOf").innerHTML = catPerOf.toFixed(2);
     document.getElementById("dogPerOf").innerHTML = dogPerOf.toFixed(2);
+    document.getElementById("garPerOf").innerHTML = garPerOf.toFixed(2);
 
-    let totalPerOf = (antPerOf + batPerOf + catPerOf + dogPerOf)
+    let totalPerOf = (antPerOf + batPerOf + catPerOf + dogPerOf + garPerOf)
     document.getElementById("totalPerOf").innerHTML = totalPerOf.toFixed(2);
 
     /* Updates first values in summary text */
@@ -86,6 +96,7 @@ function calculate() {
     document.getElementById("dogHexaValSummary").textContent = dogHexaValSummary.toFixed(2);
     document.getElementById("eelHexaValSummary").textContent = eelHexaValSummary.toFixed(2);
     document.getElementById("foxHexaValSummary").textContent = foxHexaValSummary.toFixed(2);
+    document.getElementById("garHexaValSummary").textContent = garHexaValSummary.toFixed(2);
 
     document.getElementById("antBoxPerSummary").textContent = antBoxPerSummary.toFixed(2);
     document.getElementById("batBoxPerSummary").textContent = batBoxPerSummary.toFixed(2);
@@ -93,13 +104,14 @@ function calculate() {
     document.getElementById("dogBoxPerSummary").textContent = dogBoxPerSummary.toFixed(2);
     document.getElementById("eelBoxPerSummary").textContent = eelBoxPerSummary.toFixed(2);
     document.getElementById("foxBoxPerSummary").textContent = foxBoxPerSummary.toFixed(2);
-    
+    document.getElementById("garBoxPerSummary").textContent = garBoxPerSummary.toFixed(2);
 
     /* Updates second values in summary text */
     document.getElementById("antPerOfInvested").textContent = antPerOf.toFixed(2);
     document.getElementById("batPerOfInvested").textContent = batPerOf.toFixed(2);
     document.getElementById("catPerOfInvested").textContent = catPerOf.toFixed(2);
     document.getElementById("dogPerOfInvested").textContent = dogPerOf.toFixed(2);
+    document.getElementById("garPerOfInvested").textContent = garPerOf.toFixed(2);
 }
 
 /* The reset function. Clears all fields of values */
@@ -111,6 +123,7 @@ function reset() {
     document.getElementById("dogHexaVal").value = "0";
     document.getElementById("eelHexaVal").value = "0";
     document.getElementById("foxHexaVal").value = "0";
+    document.getElementById("garHexaVal").value = "0";
 
     /* Clears the calculated values */
     document.getElementById("totalHexaVal").innerHTML = "";
@@ -119,11 +132,13 @@ function reset() {
     document.getElementById("batBoxVal").innerHTML = "";
     document.getElementById("catBoxVal").innerHTML = "";
     document.getElementById("dogBoxVal").innerHTML = "";
+    document.getElementById("garBoxVal").innerHTML = "";
 
     document.getElementById("antBoxPer").innerHTML = "";
     document.getElementById("batBoxPer").innerHTML = "";
     document.getElementById("catBoxPer").innerHTML = "";
     document.getElementById("dogBoxPer").innerHTML = "";
+    document.getElementById("garBoxPer").innerHTML = "";
 
     document.getElementById("totalBoxVal").innerHTML = "";
 
@@ -133,6 +148,7 @@ function reset() {
     document.getElementById("batPerOf").innerHTML = "";
     document.getElementById("catPerOf").innerHTML = "";
     document.getElementById("dogPerOf").innerHTML = "";
+    document.getElementById("garPerOf").innerHTML = "";
 
     document.getElementById("totalPerOf").innerHTML = "";
 
@@ -143,6 +159,7 @@ function reset() {
     document.getElementById("dogHexaValSummary").innerHTML = "";
     document.getElementById("eelHexaValSummary").innerHTML = "";
     document.getElementById("foxHexaValSummary").innerHTML = "";
+    document.getElementById("garHexaValSummary").innerHTML = "";
 
     document.getElementById("antBoxPerSummary").innerHTML = "";
     document.getElementById("batBoxPerSummary").innerHTML = "";
@@ -150,11 +167,13 @@ function reset() {
     document.getElementById("dogBoxPerSummary").innerHTML = "";
     document.getElementById("eelBoxPerSummary").innerHTML = "";
     document.getElementById("foxBoxPerSummary").innerHTML = "";
+    document.getElementById("garBoxPerSummary").innerHTML = "";
 
     document.getElementById("antPerOfInvested").innerHTML = "";
     document.getElementById("batPerOfInvested").innerHTML = "";
     document.getElementById("catPerOfInvested").innerHTML = "";
     document.getElementById("dogPerOfInvested").innerHTML = "";
+    document.getElementById("garPerOfInvested").innerHTML = "";
 }
 
 /* Adds an event listener for the reset button */

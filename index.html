@@ -17,7 +17,7 @@
 </head>
 <body class="body-fade-in">
     <h1>STASH<br>Smart Portfolio to Roth IRA<br>Investment Converter</h1>
-    <p class="p-version">Version 0.8.1</p>
+    <p class="p-version">Version 0.8.1.2</p>
     <div class="my-two-columns">
         <div class="my-left-column">
             <h4>Smart Portfolio Investment Totals</h4>
@@ -28,6 +28,7 @@
                     <li><label for="dogHexaVal">Foreign Heavyweights: $<input type="text" id="dogHexaVal" value="0"></label></li>
                     <li><label for="eelHexaVal">Bitcoin Trust: $<input type="text" id="eelHexaVal" value="0"></label></li>
                     <li><label for="foxHexaVal">Ethereum Trust: $<input type="text" id="foxHexaVal" value="0"></label></li>
+                    <li><label for="foxHexaVal">US Treasury Income: $<input type="text" id="garHexaVal" value="0"></label></li>
                     <li><label for="totalHexaVal">Total Entered: $ <span id="totalHexaVal"></span></label></li>
                 </ul>
                 <button id="calculateButton" onclick="calculate()"><br>Calculate!<br><br><span class="material-symbols-outlined calculate-span">price_check</span></button>
@@ -40,6 +41,7 @@
                 <li>Up & Coming: $ <span id="batBoxVal"></span> | <span id="batBoxPer"></span> % | $ <span id="batPerOf"></span></li>
                 <li>Global USD Bonds Variety Pack: $ <span id="catBoxVal"></span> | <span id="catBoxPer"></span> % | $ <span id="catPerOf"></span></li>
                 <li>Foreign Heavyweights: $ <span id="dogBoxVal"></span> | <span id="dogBoxPer"></span> % | $ <span id="dogPerOf"></span></li>
+                <li>US Treasury Income: $ <span id="garBoxVal"></span> | <span id="garBoxPer"></span> % | $ <span id="garPerOf"></span></li>
                 <li><br></li>
                 <li><br></li>
                 <li>Totals: $ <span id="totalBoxVal"></span> | Percent: <span id="totalBoxPer"></span> % | Amount Invested: $ <span id="totalPerOf"></span></li>
@@ -56,6 +58,7 @@
         <p>In <b class="white-text">Foreign Heavyweights</b> <b>$IEFA</b>, <b class="limegreen-text">$<span id="dogHexaValSummary">0</span></b> was invested, <b class="silver-text"><span id="dogBoxPerSummary">0</span>%</b> of the total investment.</p>
         <p>In <b class="white-text">Bitcoin Trust</b> (Exclusive to <b class="white-text">STASH Smart Portfolios</b>), <b class="limegreen-text">$<span id="eelHexaValSummary">0</span></b> was invested, <b class="silver-text"><span id="eelBoxPerSummary">0</span>%</b> of the total investment.</p>
         <p>In <b class="white-text">Ethereum Trust</b> (Exclusive to <b class="white-text">STASH Smart Portfolios</b>), <b class="limegreen-text">$<span id="foxHexaValSummary">0</span></b> was invested, <b class="silver-text"><span id="foxBoxPerSummary">0</span>%</b> of the total investment.</p>
+        <p>In <b class="white-text">US Treasury Income</b> <b>$TFLO</b>, <b class="limegreen-text">$<span id="garHexaValSummary">0</span></b> was invested, <b class="silver-text"><span id="garBoxPerSummary">0</span>%</b> of the total investment.</p>
         <br>
         <p>Converting this into a <b class="limegreen-text">$115</b> investment into my <b class="gold-text">Roth IRA</b>, it becomes:</p>
         <br>
@@ -63,6 +66,7 @@
         <p>In <b class="white-text">Up & Coming</b> <b>$VWO</b>, <b class="limegreen-text">$<span id="batPerOfInvested">0</span></b> was invested.</p>
         <p>In <b class="white-text">Global USD Bonds Variety Pack</b> <b>$IUSB</b>, <b class="limegreen-text">$<span id="catPerOfInvested">0</span></b> was invested.</p>
         <p>In <b class="white-text">Foreign Heavyweights</b> <b>$IEFA</b>, <b class="limegreen-text">$<span id="dogPerOfInvested">0</span></b> was invested.</p>
+        <p>In <b class="white-text">US Treasury Income</b> <b>$TFLO</b>, <b class="limegreen-text">$<span id="garPerOfInvested">0</span></b> was invested.</p>
     </div>
     <br>
     <br>
